@@ -7,6 +7,8 @@ body {
     justify-content: center;
     align-items: center;
     background: aliceblue;
+    box-sizing: border-box;
+    height: 100vh;
     
 }
 header{
@@ -102,9 +104,9 @@ header li:hover .title{
 
 main div{
     justify-content: center;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    position: relative;
+    position: absolute;
     /* background-color: #523F38; */
     padding: 20px;
     margin: 0px;
@@ -112,7 +114,7 @@ main div{
 main > #presentation{
     position: relative;
     display: flex;
-    justify-content:center;
+    justify-content:;
     margin: 0;
 }
 
@@ -120,38 +122,9 @@ img{
     border-radius: 50%;
     margin-left: 50px;
     filter: blur(5px);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.11);
 }
-/* main #presentation::before{
-    content: '';
-    position: relative;
-    inset: 1;
-    background: url(imagens/peixe.png);
-    filter: blur(100px);
-    opacity: 1;
-    z-index: 1;
-    transition: 3s;
-    transition-delay: 1s;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.13);
-} */
-/* main img{
-    content: '';
-    position: relative;
-    inset: 1;
-    background: url(imagens/peixe.png);
-    filter: blur( 20px);
-    opacity: 1;
-    z-index: 1;
-} */
-main img{
-    transition: 2s;
-    transition-delay: 1.5s;
-    position: relative;
-    display: flex;
-    transition: 1;
-    transition-delay: 0.5;
-    animation: img 4.5s both;
-    
-}
+
 .presentation{
     font-size: 2em;
     font-family:'Poppins', sans-serif;
@@ -160,15 +133,27 @@ main img{
     text-shadow: rgba(0, 0, 0, 1)
 }
 
-@keyframes img {
+.old, .personal, .dev{
+    font-size: 2em;
+    font-family:'Poppins', sans-serif;
+    color: #4c5454ff;
+}
+.peixePic{
+    transition: 2s;
+    transition-delay: 1.5s;
+    position: relative;
+    display: flex;
+    transition: 1;
+    animation: peixePic 4.5s both;
+}
+@keyframes peixePic {
     0%{
-        ;
         filter: blur(10px);
     }
+
     100%{
         filter: blur(0px);
     }
-    
 }
 main .presentation{
     transition: 2s;
@@ -177,13 +162,10 @@ main .presentation{
     justify-content: center;
     align-items: center;
     display: flex;
-    transition: 1;
-    transition-delay: 0.5;
     animation: presentation 4.5s both;
     
 }
 @keyframes presentation{
-    
     0%{
         transition-delay: 0.5s;
         transform: translateX(0) translateY(0);
@@ -194,31 +176,119 @@ main .presentation{
         opacity: 0.5;
     }
     100%{
-        transform: translateX(200px) translateY(-300);
+        transform: translateX(0px) translateY(0);
+        opacity: 1;
+        padding-left: 30px;
+    }
+}
+main .old{
+    transition: 2s;
+    transition-delay: 1.5s;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    animation: old 5.5s both;
+}
+@keyframes old{
+    
+    
+    0%{transform: translateX(00px) translateY(50px);
+        opacity: 0;
+    }
+    40%{
+        transition-delay: 0.5s;
+        transform: translateX(0px) translateY(50px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(550px) translateY(50px);
+        opacity: 0.5;
+
+    }
+   
+    100%{
+        transform: translateX(300px) translateY(50px);
+        opacity: 1;
+        padding-left: 30px;
+    }
+}main .personal{
+    transition: 2s;
+    transition-delay: 0.5s;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    animation: personal 7.5s both;
+    
+}
+@keyframes personal{
+    
+    0%{transform: translateX(00px) translateY(100px);
+        opacity: 0;
+    }
+    40%{
+        transition-delay: 0.5s;
+        transform: translateX(00px) translateY(100px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(600px) translateY(100px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(350px) translateY(100px);
+        opacity: 1;
+        padding-left: 30px;
+    }
+}
+main .dev{
+    transition: 2s;
+    transition-delay: 1.5s;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    animation: dev 9.5s both;
+    
+}
+@keyframes dev{
+    0%{transform: translateX(00px) translateY(150px);
+        opacity: 0;
+    }
+    40%{
+        transition-delay: 0.5s;
+        transform: translateX(00px) translateY(150px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(600px) translateY(150px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(400px) translateY(150px);
         opacity: 1;
         padding-left: 30px;
     }
 }
 
-main > .presentation {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:;
-}
 
-@media (max-width: 1000px){
-    
+
+@media (max-width: 1130px){
+    header{
+        margin: auto;
+    }
     main img{
         size: 300px 300px;
         display: block;
+        position: relative;
+        margin: auto;
         
     }
     .presentation {
         display: none;
     }
-    main:hover .presentation{
+    main .presentation{
     transition: 2s;
     transition-delay: 1.5s;
     position: absolute;
@@ -243,5 +313,18 @@ main > .presentation {
             opacity: 1;
             padding-left: 30px;
         }
+    }
+}
+@media (max-width:900px){
+    .presentation{
+        font-size:1.5em ;
+        margin: auto;
+        padding: auto;
+        padding-left: 0px;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+    }
+    main img{
+        margin: auto;
     }
 }
