@@ -104,15 +104,17 @@ main div{
     padding: 20px;
     margin: 0px;
 }
-main > #presentation{
+main section{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding: 20px;
+    margin: 0px;
+}
+main > #home{
     position: relative;
     display: flex;
-}
-img{
-    border-radius: 50%;
-    margin-left: 50px;
-    filter: blur(5px);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.11);
 }
 .presentation{
     font-size: 2em;
@@ -126,6 +128,11 @@ img{
     color: #4c5454ff;
 }
 .peixePic{
+    border-radius: 50%;
+    margin-left: 50px;
+    filter: blur(5px);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.11);
+    opacity: 0.7;
     transition: 2s;
     transition-delay: 1.5s;
     position: relative;
@@ -283,7 +290,7 @@ main .dev{
         font-size: 1.75em;
     }
 }
-@media (max-width: 1150px){
+@media (max-width:1150px){
     header{
         margin: auto;
     }
