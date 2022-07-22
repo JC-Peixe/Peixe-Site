@@ -3,13 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 
 body {
-    display: block;
-    justify-content: center;
-    align-items: center;
     background: aliceblue;
     box-sizing: border-box;
     height: 100vh;
-    
 }
 header{
     position: relative;
@@ -92,7 +88,6 @@ header li .title{
     transition: 0.5s;
     transition-delay: 0s;
 }
-
 header a{
     text-decoration: none;
     color: #000;
@@ -101,38 +96,30 @@ header li:hover .title{
     transform: scale(1);
     transition-delay: 0.25s;
 }
-
 main div{
     justify-content: center;
     display: flex;
     align-items: center;
     position: absolute;
-    /* background-color: #523F38; */
     padding: 20px;
     margin: 0px;
 }
 main > #presentation{
     position: relative;
     display: flex;
-    justify-content:;
-    margin: 0;
 }
-
 img{
     border-radius: 50%;
     margin-left: 50px;
     filter: blur(5px);
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.11);
 }
-
 .presentation{
     font-size: 2em;
     font-family:'Poppins', sans-serif;
-    display: none;
     color: rgb(49, 196, 201);
     text-shadow: rgba(0, 0, 0, 1)
 }
-
 .old, .personal, .dev{
     font-size: 2em;
     font-family:'Poppins', sans-serif;
@@ -143,8 +130,7 @@ img{
     transition-delay: 1.5s;
     position: relative;
     display: flex;
-    transition: 1;
-    animation: peixePic 4.5s both;
+    animation: peixePic 3.5s both;
 }
 @keyframes peixePic {
     0%{
@@ -156,14 +142,13 @@ img{
     }
 }
 main .presentation{
-    transition: 2s;
-    transition-delay: 1.5s;
+    transition: 0.2s;
+    transition-delay: 0s;
     position: relative;
     justify-content: center;
     align-items: center;
     display: flex;
-    animation: presentation 4.5s both;
-    
+    animation: presentation 3.5s both;
 }
 @keyframes presentation{
     0%{
@@ -182,17 +167,15 @@ main .presentation{
     }
 }
 main .old{
-    transition: 2s;
-    transition-delay: 1.5s;
+    transition: 0.25s;
+    transition-delay: 0s;
     position: relative;
     justify-content: center;
     align-items: center;
     display: flex;
-    animation: old 5.5s both;
+    animation: old 4.5s both;
 }
 @keyframes old{
-    
-    
     0%{transform: translateX(00px) translateY(50px);
         opacity: 0;
     }
@@ -204,26 +187,23 @@ main .old{
     50%{
         transform: translateX(550px) translateY(50px);
         opacity: 0.5;
-
     }
-   
     100%{
         transform: translateX(300px) translateY(50px);
         opacity: 1;
         padding-left: 30px;
     }
-}main .personal{
-    transition: 2s;
-    transition-delay: 0.5s;
+}
+main .personal{
+    transition: 0.25s;
+    transition-delay: 0s;
     position: relative;
     justify-content: center;
     align-items: center;
     display: flex;
-    animation: personal 7.5s both;
-    
+    animation: personal 6.5s both;
 }
 @keyframes personal{
-    
     0%{transform: translateX(00px) translateY(100px);
         opacity: 0;
     }
@@ -243,14 +223,13 @@ main .old{
     }
 }
 main .dev{
-    transition: 2s;
-    transition-delay: 1.5s;
+    transition: 0.25s;
+    transition-delay: 0s;
     position: relative;
     justify-content: center;
     align-items: center;
     display: flex;
-    animation: dev 9.5s both;
-    
+    animation: dev 8.5s both;
 }
 @keyframes dev{
     0%{transform: translateX(00px) translateY(150px);
@@ -271,10 +250,40 @@ main .dev{
         padding-left: 30px;
     }
 }
-
-
-
-@media (max-width: 1130px){
+@media (max-width:1543px){
+    .old, .personal, .dev{
+        margin-top:120px;
+        margin-left:-50px;
+    }
+}
+@media (max-width:1363px){
+    .old, .personal, .dev{
+        margin-top:120px;
+        margin-left:-70px;
+    }
+}
+@media (max-width:1312px){
+    .old, .personal, .dev{
+        margin-top:120px;
+        margin-left:-105px;
+        font-size: 1.8em;
+    }
+}
+@media (max-width:1280px){
+    .old, .personal, .dev{
+        margin-top:120px;
+        margin-left:-125px;
+        font-size: 1.8em;
+    }
+}
+@media (max-width:1230px){
+    .old, .personal, .dev{
+        margin-top:120px;
+        margin-left:-135px;
+        font-size: 1.75em;
+    }
+}
+@media (max-width: 1150px){
     header{
         margin: auto;
     }
@@ -283,21 +292,17 @@ main .dev{
         display: block;
         position: relative;
         margin: auto;
-        
-    }
-    .presentation {
-        display: none;
+        padding: 0;
     }
     main .presentation{
-    transition: 2s;
-    transition-delay: 1.5s;
+    transition: 0.2s;
+    transition-delay: 0s;
     position: absolute;
     justify-content: center;
     align-items: center;
     display: flex;
     animation: presentation 3.5s both;
-    z-index: 1;
-}
+    }
     @keyframes presentation{
     
         0%{
@@ -309,14 +314,99 @@ main .dev{
             opacity: 0.5;
         }
         100%{
+            transform: translateX(0px) translateY(350px);
+            opacity: 1;
+            
+        }
+    }
+    .old, .personal,.dev{
+        font-size: 2em;
+        margin: auto;
+    }
+    main .old{
+        transition: 0.2s;
+        transition-delay: 0s;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        animation: old 5.5s both;
+    }
+    @keyframes old{
+        0%{transform: translateX(-100px) translateY(50px);
+            opacity: 0;
+        }
+        40%{
+            transition-delay: 0.5s;
+            transform: translateX(-100px) translateY(50px);
+            opacity: 0;
+        }
+        50%{
+            transform: translateX(-100px) translateY(500px);
+            opacity: 0.5;
+        }
+        100%{
+            transform: translateX(-100px) translateY(400px);
+            opacity: 1;
+        }
+    }
+    main .personal{
+        transition: 0.2s;
+        transition-delay: 0s;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        animation: personal 6.5s both;
+    }
+    @keyframes personal{
+        0%{transform: translateX(0px) translateY(50px);
+            opacity: 0;
+        }
+        40%{
+            transition-delay: 0.5s;
+            transform: translateX(0px) translateY(50px);
+            opacity: 0;
+        }
+        50%{
+            transform: translateX(00px) translateY(500px);
+            opacity: 0.5;
+        }
+        100%{
             transform: translateX(0px) translateY(400px);
             opacity: 1;
-            padding-left: 30px;
+        }
+    }
+    main .dev{
+        transition: 0.2s;
+        transition-delay: 0s;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        animation: dev 7.5s both;
+    }
+    @keyframes dev{
+        0%{transform: translateX(100px) translateY(50px);
+            opacity: 0;
+        }
+        40%{
+            transition-delay: 0.5s;
+            transform: translateX(100px) translateY(50px);
+            opacity: 0;
+        }
+        50%{
+            transform: translateX(100px) translateY(500px);
+            opacity: 0.5;
+        }
+        100%{
+            transform: translateX(100px) translateY(400px);
+            opacity: 1;
         }
     }
 }
 @media (max-width:900px){
-    .presentation{
+    .presentation, .old, .dev,.personal{
         font-size:1.5em ;
         margin: auto;
         padding: auto;
